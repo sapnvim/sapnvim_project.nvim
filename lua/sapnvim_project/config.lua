@@ -19,6 +19,7 @@ local function get_default_storage_dir()
 end
 
 M.defaults = {
+  ---type string
   sessions_storage_dir = utils.add_slash_if_folder(get_default_storage_dir()),
   sessions_data_filename = 'sessions_data.lua',
   picker_opts = {
@@ -27,9 +28,8 @@ M.defaults = {
 
 M.options = nil
 
--- Setup function to initialize configuration
--- @param opts table Optional configuration table to override defaults
--- @return boolean Success status
+--- Setup function to initialize configuration
+---@param user_config table Optional configuration table to override defaults
 M.setup = function(user_config)
   -- Initialize with default configuration
   local config = user_config

@@ -67,7 +67,9 @@ function sessions.add_session(new_session)
     return false
   end
   table.insert(sessions_table, new_session)
-  storage.write_data_to_file({ sessions = sessions_table, history = {} })
+  local data = storage.load_data_form_file()
+  data.sessions = sessions_table
+  storage.write_data_to_file(data)
   new_session.name = sessions_storage_dir .. new_session.name
   vim.cmd(string.format('silent! mks! %s', new_session.name))
   return true

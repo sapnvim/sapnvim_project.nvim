@@ -45,4 +45,6 @@ session_manager.close_session = sessions.close_session
 ---@type fun(): { name: string, path: string }[]
 session_manager.get_history_sessions = history.get_history_sessions
 
+session_manager.create_history_session = history.create_history_session
+
 return session_manager
