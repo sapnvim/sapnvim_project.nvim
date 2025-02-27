@@ -102,9 +102,6 @@ function sessions.load_session(selected_session)
     return false
   end
 
-  -- Close all open buffers.
-  vim.cmd('silent! %bd')
-
   -- Cache session values for clarity.
   local session_path = selected_session.value
   local session_name = selected_session.name
@@ -119,12 +116,15 @@ function sessions.load_session(selected_session)
   return true
 end
 
-function sessions.close_session(selected_session)
+function sessions.close_session(selected_session, change)
+  change = change or false
   if not selected_session then
     return false
   end
   vim.cmd('silent %bd')
-  vim.cmd.cd(vim.env.PWD)
+  if not change then
+    vim.cmd.cd(vim.env.PWD)
+  end
   return true
 end
 
