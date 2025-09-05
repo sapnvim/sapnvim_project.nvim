@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/sapnvim/sapnvim_project.nvim/compare/v1.1.0...v1.1.1) (2025-09-05)
+
+
+### Bug Fixes
+
+* **autocmds:** defer execution of create_aotucmd ([fcfcac8](https://github.com/sapnvim/sapnvim_project.nvim/commit/fcfcac815560931713911289b4c5bb16cf4aa86f))
+
 ## [1.1.0](https://github.com/sapnvim/sapnvim_project.nvim/compare/v1.0.0...v1.1.0) (2025-03-04)
 
 
