@@ -67,4 +67,4 @@ local function create_aotucmd()
   end
 end
 
-return { create_aotucmd = create_aotucmd() }
+return { create_aotucmd = create_aotucmd }
